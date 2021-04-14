@@ -12,6 +12,6 @@ class Character(models.Model):
     name = models.CharField(null = True, blank = False, max_length = 50)
     gender = models.CharField(choices = GENDER_CHOICES, max_length = 20)
     age = models.IntegerField()
-    img_Url = models.CharField(max_length = 100)
+    img_Url = models.CharField(max_length = 400)
     bio = models.CharField(default = "", max_length = 50)
-    created_at = models.DateField(default = datetime.datetime.now)
+    created_at = models.DateField(default = datetime.date.today)
