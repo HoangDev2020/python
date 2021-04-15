@@ -39,6 +39,6 @@ def character_single(request, pk, format = None):
             return Response(serializer.data)
         return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
     elif request.method == "DELETE":
-        # character = Character.get_object(pk)
+        character = Character.get_object(pk)
         character.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
