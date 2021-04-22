@@ -16,4 +16,4 @@ class User(models.Model):
     username = models.CharField(max_length = 20)
     email = models.CharField(max_length = 100)
     password = models.CharField(max_length = 150)
-    created_at = models.DateTimeField(default = datetime.date.today)
+    created_at = models.DateTimeField(default = datetime.datetime.now())
